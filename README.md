@@ -1,14 +1,30 @@
-goohacker
+# LineVodka
+_May the Vodka be with you..._
 
-This is tutorial on English :
+Tutorial
+------
+Recomended for python 2.7
 
-pkg install python2 -y
-Pkg install git -y
-git clone http://github.com/merkremont/LineVodka
-pip2 install thrift==0.9.3
-pkg install rsa
-pip2 install requests
-pip2 install rsa
-cd LineVodka
-python2 vodkabot.py
-https://youtu.be/_Iqxe1hfb0Q
+Using git :
+
+    $ git clone http://github.com/merkremont/LineVodka
+
+Python packages :
+
+    $ pip install thrift==0.9.3
+    $ pip install rsa
+    $ pip install requests
+
+Run Vodka :
+
+    $ python vodkabot.py
+
+Video Tutorial
+------
+
+[![Tutorial Build BOT LINE Unofficial Protector and Kicker Group](http://i.imgur.com/C8xYq7v.png "Tutorial Build BOT LINE Unofficial Protector and Kicker Group")](https://youtu.be/anoF3jnWl2A)
+
+Author
+------
+
+Merk Kremont / [@merkremont](https://twitter.com/merkremont)

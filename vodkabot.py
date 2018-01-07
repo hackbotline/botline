@@ -39,7 +39,7 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
 
 def NOTIFIED_ADD_CONTACT(op):
     try:
-        sendMessage(op.param1, client.getContact(op.param1).displayName + "ขอบคุณที่เพิ่มฉันเป็นเพื่อนยินดีที่ได้รู้จักสนจัย บอท สอบถามได้คับ")
+        sendMessage(op.param1, client.getContact(op.param1).displayName + "Thanks for add")
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_ADD_CONTACT\n\n")
@@ -50,7 +50,7 @@ tracer.addOpInterrupt(5,NOTIFIED_ADD_CONTACT)
 def NOTIFIED_ACCEPT_GROUP_INVITATION(op):
     #print op
     try:
-        sendMessage(op.param1, client.getContact(op.param2).displayName + " ยินดีต้อนรับเข้ากลุ่ม บ้านมีบอทอย่าทำผิดกฎ \n(*´･ω･*)")
+        sendMessage(op.param1, client.getContact(op.param2).displayName + "WELCOME to " + group.name)
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_ACCEPT_GROUP_INVITATION\n\n")
@@ -60,7 +60,7 @@ tracer.addOpInterrupt(17,NOTIFIED_ACCEPT_GROUP_INVITATION)
 
 def NOTIFIED_KICKOUT_FROM_GROUP(op):
     try:
-        sendMessage(op.param1, client.getContact(op.param3).displayName + "  บ๊าย บาย แล้วเจอกันใหม่ \n(*´･ω･*)")
+        sendMessage(op.param1, client.getContact(op.param3).displayName + " Good Bye\n(*´･ω･*)")
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_KICKOUT_FROM_GROUP\n\n")
@@ -70,7 +70,7 @@ tracer.addOpInterrupt(19,NOTIFIED_KICKOUT_FROM_GROUP)
 
 def NOTIFIED_LEAVE_GROUP(op):
     try:
-        sendMessage(op.param1, client.getContact(op.param2).displayName + "  บ๊าย บาย แล้วเจอกันใหม่ \n(*´･ω･*)")
+        sendMessage(op.param1, client.getContact(op.param2).displayName + " Good Bye\n(*´･ω･*)")
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_LEAVE_GROUP\n\n")
